@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="1" skipped="0" failures="0" errors="0" time="0.006505" timestamp="2019-04-24T15:29:16+02:00" hostname="voyager.local">
+<properties>
+<property name="seed" value="61948"/>
+</properties>
+<testcase classname="spec.deploy_aws_s3_cloudfront_action_spec" name="Fastlane::Actions::DeployAwsS3CloudfrontAction#run prints a message" file="./spec/deploy_aws_s3_cloudfront_action_spec.rb" time="0.005285"></testcase>
+</testsuite>
