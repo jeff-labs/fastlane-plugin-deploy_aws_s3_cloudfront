@@ -17,11 +17,11 @@ module Fastlane
 
         files = get_files_from_source(source)
 
-        paths = files.map { |file|
+        paths = files.map {|file|
           key = file.relative_path_from(Pathname(source)).to_s
           content_type = get_content_type(file)
           s3client.put_object({body: file.open("rb"), bucket: bucket, key: key.to_s, content_type: content_type})
-          return "/" + key
+          "/" + key
         }
 
         cloudfront = Aws::CloudFront::Client.new
