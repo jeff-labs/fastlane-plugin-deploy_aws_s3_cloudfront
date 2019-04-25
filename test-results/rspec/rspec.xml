@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="1" skipped="0" failures="0" errors="0" time="0.006505" timestamp="2019-04-24T15:29:16+02:00" hostname="voyager.local">
+<testsuite name="rspec" tests="2" skipped="0" failures="0" errors="0" time="0.002194" timestamp="2019-04-25T11:30:40+02:00" hostname="voyager.local">
 <properties>
-<property name="seed" value="61948"/>
+<property name="seed" value="54699"/>
 </properties>
-<testcase classname="spec.deploy_aws_s3_cloudfront_action_spec" name="Fastlane::Actions::DeployAwsS3CloudfrontAction#run prints a message" file="./spec/deploy_aws_s3_cloudfront_action_spec.rb" time="0.005285"></testcase>
+<testcase classname="spec.deploy_aws_s3_cloudfront_action_spec" name="Fastlane::Actions::DeployAwsS3CloudfrontAction#get_content_type get file content type" file="./spec/deploy_aws_s3_cloudfront_action_spec.rb" time="0.000552"></testcase>
+<testcase classname="spec.deploy_aws_s3_cloudfront_action_spec" name="Fastlane::Actions::DeployAwsS3CloudfrontAction#get_content_type get file content type" file="./spec/deploy_aws_s3_cloudfront_action_spec.rb" time="0.000115"></testcase>
 </testsuite>

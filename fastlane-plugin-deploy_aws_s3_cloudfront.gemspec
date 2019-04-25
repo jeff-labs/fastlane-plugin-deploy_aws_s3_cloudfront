@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'hector@mrjeffapp.com'
 
   spec.summary       = 'Deploy local directory to AWS S3 bucket and invalidate CloudFront'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-deploy_aws_s3_cloudfront"
+  spec.homepage      = "https://github.com/MrJeffApp/fastlane-plugin-deploy_aws_s3_cloudfront"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'aws-sdk-s3', '~> 1.36'
   spec.add_dependency 'aws-sdk-cloudfront', '~> 1.15'
+  spec.add_dependency 'mimemagic', '~> 0.3'
 
   spec.add_development_dependency('pry')
   spec.add_development_dependency('bundler')
