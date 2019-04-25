@@ -12,15 +12,12 @@ fastlane add_plugin deploy_aws_s3_cloudfront
 
 ## About deploy_aws_s3_cloudfront
 
-Deploy local directory to AWS S3 bucket and invalidate CloudFront
-
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
+Syncs a local directory to an AWS S3 bucket and invalidate CloudFront distribution.
+This plugin it's based in the [deploy-aws-s3-cloudfront](https://www.npmjs.com/package/deploy-aws-s3-cloudfront) project.
 
 ## Example
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
-
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
 
 ## Run tests for this plugin
 
