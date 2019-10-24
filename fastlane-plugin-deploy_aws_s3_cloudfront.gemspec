@@ -21,9 +21,9 @@ Gem::Specification.new do |spec|
   # Don't add a dependency to fastlane or fastlane_re
   # since this would cause a circular dependency
 
-  spec.add_dependency 'aws-sdk-s3', '~> 1.36'
-  spec.add_dependency 'aws-sdk-cloudfront', '~> 1.15'
-  spec.add_dependency 'mimemagic', '~> 0.3'
+  spec.add_dependency('aws-sdk-s3', '~> 1.36')
+  spec.add_dependency('aws-sdk-cloudfront', '~> 1.15')
+  spec.add_dependency('mimemagic', '~> 0.3')
 
   spec.add_development_dependency('pry')
   spec.add_development_dependency('bundler')
