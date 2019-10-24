@@ -17,12 +17,12 @@ module Fastlane
 
         files = get_files_from_source(source)
 
-        paths = files.map {|file|
+        paths = files.map do |file|
           key = file.relative_path_from(Pathname(source)).to_s
           content_type = get_content_type(file)
-          s3client.put_object({body: file.open("rb"), bucket: bucket, key: key.to_s, content_type: content_type})
+          s3client.put_object({ body: file.open("rb"), bucket: bucket, key: key.to_s, content_type: content_type })
           "/" + key
-        }
+        end
 
         cloudfront = Aws::CloudFront::Client.new
 
@@ -31,18 +31,17 @@ module Fastlane
             invalidation_batch: {
                 paths: {
                     quantity: paths.size,
-                    items: paths,
+                    items: paths
                 },
                 caller_reference: SecureRandom.hex
-            },
+            }
         }
 
         cloudfront.create_invalidation(invalidation)
-
       end
 
       def self.get_files_from_source(source)
-        return Dir.glob("#{source}/**/*").select {|f| File.file? f}.map {|f| Pathname(f)}
+        return Dir.glob("#{source}/**/*").select { |f| File.file?(f) }.map { |f| Pathname(f) }
       end
 
       def self.get_content_type(file)
@@ -70,21 +69,21 @@ module Fastlane
 
       def self.available_options
         [
-            FastlaneCore::ConfigItem.new(key: :bucket,
-                                         env_name: "DEPLOY_AWS_S3_CLOUDFRONT_YOUR_OPTION",
-                                         description: "A description of your option",
-                                         optional: false,
-                                         type: String),
-            FastlaneCore::ConfigItem.new(key: :source,
-                                         env_name: "DEPLOY_AWS_S3_CLOUDFRONT_YOUR_OPTION",
-                                         description: "A description of your option",
-                                         optional: false,
-                                         type: String),
-            FastlaneCore::ConfigItem.new(key: :distribution_id,
-                                         env_name: "DEPLOY_AWS_S3_CLOUDFRONT_YOUR_OPTION",
-                                         description: "A description of your option",
-                                         optional: false,
-                                         type: String)
+          FastlaneCore::ConfigItem.new(key: :bucket,
+                                       env_name: "DEPLOY_AWS_S3_CLOUDFRONT_YOUR_OPTION",
+                                       description: "A description of your option",
+                                       optional: false,
+                                       type: String),
+          FastlaneCore::ConfigItem.new(key: :source,
+                                       env_name: "DEPLOY_AWS_S3_CLOUDFRONT_YOUR_OPTION",
+                                       description: "A description of your option",
+                                       optional: false,
+                                       type: String),
+          FastlaneCore::ConfigItem.new(key: :distribution_id,
+                                       env_name: "DEPLOY_AWS_S3_CLOUDFRONT_YOUR_OPTION",
+                                       description: "A description of your option",
+                                       optional: false,
+                                       type: String)
         ]
       end
 
