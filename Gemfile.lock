@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fastlane-plugin-deploy_aws_s3_cloudfront (0.3.0)
+    fastlane-plugin-deploy_aws_s3_cloudfront (0.4.0)
       aws-sdk-cloudfront (~> 1.15)
       aws-sdk-s3 (~> 1.36)
       mimemagic (~> 0.3)
