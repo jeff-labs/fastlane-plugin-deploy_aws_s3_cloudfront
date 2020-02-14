@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'hector@mrjeffapp.com'
 
   spec.summary       = 'Deploy local directory to AWS S3 bucket and invalidate CloudFront'
-  spec.homepage      = "https://github.com/MrJeffApp/fastlane-plugin-deploy_aws_s3_cloudfront"
+  spec.homepage      = "https://jeff-labs.github.io/fastlane-plugin-deploy_aws_s3_cloudfront"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
